@@ -3,12 +3,11 @@
 @tailwind utilities;
 
 .navbar-fixed {
-  @apply fixed z-20 bg-opacity-10;
-  backdrop-filter: blur(10px);
+  @apply fixed z-20 bg-opacity-10 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 .hmb {
-  @apply w-[30px] h-[2px] my-2 block bg-dark;
+  @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white;
 }
 .hmb-active > span:nth-child(1) {
   @apply rotate-45;
@@ -18,4 +17,7 @@
 }
 .hmb-active > span:nth-child(2) {
   @apply scale-0;
+}
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
 }
